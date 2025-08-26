@@ -8,6 +8,7 @@ export const siteContent: SiteContent = {
         id: "agentkit",
         title: "AgentKit",
         description: "A toolkit that gives AI agents access to wallet and crypto functionality. Seamlessly integrate blockchain capabilities into AI frameworks.",
+        category: "coinbase",
         technologies: ["TypeScript", "Ethereum", "Vercel AI SDK"],
         comingSoon: true // Keep as true to show the interactive demo
       },
@@ -15,8 +16,50 @@ export const siteContent: SiteContent = {
         id: "x402",
         title: "x402",
         description: "API middleware that enables payment-gated routes. Monetize your APIs with crypto payments through AgentKit or browser wallets.",
+        category: "coinbase",
         technologies: ["Node.js", "Web3", "API Design"],
         comingSoon: true
+      },
+      {
+        id: "vanderbilt-blockchain",
+        title: "Vanderbilt Blockchain - Founder & President",
+        description: "Re-chartered the club and grew it to 200+ members. Facilitated collaborations with organizations like the Ethereum Foundation, Edge and Node, Binance, Ripple Labs, etc. Created research and development committees to educate students and help them find jobs in the space. Also founded Anchor DAO, the first 501(c)(3) non-profit LLC DAO in Tennessee. One of the most rewarding and value additive things I've done.",
+        category: "previous-work",
+        technologies: ["Community Building", "Education", "DAO Governance"],
+        date: "Aug 2021 - May 2024"
+      },
+      {
+        id: "baf-board",
+        title: "Blockchain Acceleration Foundation - Board Member",
+        description: "Served on the board of BAF, helping guide strategic initiatives to accelerate blockchain adoption and education.",
+        category: "previous-work",
+        technologies: ["Governance", "Strategic Planning"],
+        date: "Apr 2022 - Apr 2024"
+      },
+      {
+        id: "prescryptive-health",
+        title: "Prescryptive Health - Blockchain Product Manager",
+        description: "Spearheaded the design and implementation of blockchain solutions to enhance the efficiency, transparency, and security of prescription data management.",
+        category: "previous-work",
+        technologies: ["Healthcare", "Product Management", "Blockchain"],
+        date: "Jul 2021 - Feb 2024"
+      },
+      {
+        id: "ethereum-fellowship",
+        title: "Ethereum Protocol Fellowship",
+        description: "Selected to receive mentorship and grant funding to advance the Ethereum core protocol. Aligned research into single-slot finality with Master's Thesis to create a comprehensive academic overview of the research space.",
+        category: "previous-work",
+        technologies: ["Protocol Research", "Single Slot Finality", "Academic Writing"],
+        date: "Jul 2023 - Nov 2023"
+      },
+      {
+        id: "leela-vs-world",
+        title: "Leela vs the World - Smart Contract Developer",
+        description: "Contributed to the world's first onchain AI game built using technology from Modulus Labs. Worked on smart contract development for making the chess board.",
+        category: "previous-work",
+        technologies: ["Solidity", "Smart Contracts", "zkML"],
+        date: "Mar 2023",
+        githubUrl: "https://github.com/modulus-labs/leela_vs_world"
       }
     ]
   },
@@ -84,6 +127,7 @@ export const siteContent: SiteContent = {
         category: "authored",
         url: "https://x.com/ethereum/status/1955673870998143383",
         description: "Guest thread on the official @ethereum handle about AI agents and x402.",
+        date: "Aug 13, 2025",
         publication: "Ethereum",
         favorite: true
       },
@@ -189,7 +233,9 @@ export const siteContent: SiteContent = {
         category: "authored",
         url: "https://tldr.tech/crypto",
         description: "Curate content for the TLDR crypto newsletter, which goes out to 250,000 subscribers Monday-Friday.",
-        publication: "TLDR"
+        date: "March 2024 - Present",
+        publication: "TLDR",
+        favorite: true
       },
       {
         id: "leela-vs-world",
@@ -204,8 +250,8 @@ export const siteContent: SiteContent = {
       {
         id: "knox-20-under-20",
         title: "Knox News 20 Under 20: Passion for Cryptocurrency",
-        type: "mention",
-        category: "mention",
+        type: "interview",
+        category: "interview",
         url: "https://www.knoxnews.com/story/money/business/2019/11/05/20-under-20-lincoln-murr-knoxville-catholic-high-school-knox-biz-magazine-news-sentinel/3868574002/",
         description: "One of my first acknowledgements in my home town of Knoxville, Tennessee.",
         date: "2019",
@@ -329,6 +375,8 @@ export const siteContent: SiteContent = {
         type: "mention",
         category: "product-reference",
         url: "https://x.com/blockworksres/status/1928104082482548829",
+        description: "Research thread about x402",
+        date: "May 29, 2025",
         publication: "Blockworks"
       },
       {
@@ -348,6 +396,7 @@ export const siteContent: SiteContent = {
         category: "product-reference",
         url: "https://openai.com/index/new-tools-for-building-agents/",
         description: "AgentKit featured as a case study in OpenAI's Agents SDK launch blog. First toolkit made publicly available for it.",
+        date: "March 11, 2025",
         publication: "OpenAI"
       },
       {
@@ -357,6 +406,7 @@ export const siteContent: SiteContent = {
         category: "product-reference",
         url: "https://99bitcoins.com/education/ai-agents-in-crypto/",
         description: "Based Agent (precursor to AgentKit) mentioned in AI agent crypto guide.",
+        date: "Jan 31, 2025",
         publication: "99 Bitcoins"
       }
     ]

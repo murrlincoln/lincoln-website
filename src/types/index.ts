@@ -14,6 +14,7 @@ export interface WorkProject {
   id: string;
   title: string;
   description: string;
+  category?: 'coinbase' | 'side-projects' | 'previous-work';
   technologies?: string[];
   demoUrl?: string;
   githubUrl?: string;
