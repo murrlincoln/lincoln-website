@@ -1,12 +1,13 @@
 export interface MediaItem {
   id: string;
   title: string;
-  type: 'article' | 'video' | 'interview';
-  category: 'authored' | 'interview' | 'product-reference';
+  type: 'article' | 'video' | 'interview' | 'research' | 'talk' | 'mention';
+  category: 'authored' | 'interview' | 'product-reference' | 'talk' | 'research' | 'mention';
   url: string;
   description?: string;
   date?: string;
   publication?: string;
+  favorite?: boolean;
 }
 
 export interface WorkProject {

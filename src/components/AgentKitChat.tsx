@@ -39,6 +39,7 @@ export default function AgentKitChat({ projectId }: AgentKitChatProps) {
       content: input,
     };
 
+    console.log('Sending message:', userMessage);
     setMessages(prev => [...prev, userMessage]);
     setInput('');
     setIsLoading(true);
@@ -57,11 +58,16 @@ export default function AgentKitChat({ projectId }: AgentKitChatProps) {
         }),
       });
 
+      console.log('Response status:', response.status);
+      
       if (!response.ok) {
-        throw new Error('Failed to get response');
+        const errorText = await response.text();
+        console.error('Response error:', errorText);
+        throw new Error(`Failed to get response: ${response.status}`);
       }
 
       const data = await response.json();
+      console.log('Response data:', data);
       
       if (data.content) {
         setMessages(prev => [
@@ -72,6 +78,15 @@ export default function AgentKitChat({ projectId }: AgentKitChatProps) {
             content: data.content,
           }
         ]);
+      } else if (data.error) {
+        setMessages(prev => [
+          ...prev,
+          {
+            id: Date.now().toString(),
+            role: 'assistant',
+            content: data.error,
+          }
+        ]);
       }
     } catch (error) {
       console.error('Chat error:', error);
@@ -80,7 +95,7 @@ export default function AgentKitChat({ projectId }: AgentKitChatProps) {
         {
           id: Date.now().toString(),
           role: 'assistant',
-          content: 'Sorry, I encountered an error. Please try again.',
+          content: `Sorry, I encountered an error: ${error instanceof Error ? error.message : 'Unknown error'}`,
         }
       ]);
     } finally {
