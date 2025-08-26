@@ -1,0 +1,126 @@
+
+> lincoln-website@0.1.0 dev
+> next dev --turbopack
+
+   ▲ Next.js 15.5.0 (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.0.17:3000
+   - Environments: .env
+
+ ✓ Starting...
+ ✓ Ready in 1067ms
+ ○ Compiling /api/chat ...
+ ✓ Compiled /api/chat in 3.5s
+bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
+ POST /api/chat 200 in 6511ms
+Received messages: [ { role: 'user', content: 'Hello, what can you do?' } ]
+OPENAI_API_KEY exists: true
+OPENAI_API_KEY length: 164
+Calling generateText...
+Generated text: 
+Usage: { promptTokens: NaN, completionTokens: NaN, totalTokens: NaN }
+ POST /api/chat 200 in 2351ms
+Received messages: [ { role: 'user', content: 'Hello, what can you do?' } ]
+OPENAI_API_KEY exists: true
+Generated response: I can help you interact onchain using the Coinbase Developer Platform. If you have specific tasks in mind, feel free to ask!
+ POST /api/chat 200 in 2491ms
+Received messages: [ { role: 'user', content: 'What is the price of Bitcoin?' } ]
+OPENAI_API_KEY exists: true
+Generated response: I currently don't have the capability to retrieve live market data such as the price of Bitcoin. You can check the latest price on cryptocurrency exchanges or financial news websites.
+ POST /api/chat 200 in 1636ms
+ ○ Compiling / ...
+ ✓ Compiled / in 1898ms
+ GET / 200 in 2130ms
+ ✓ Compiled /favicon.ico in 162ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 419ms
+Received messages: [ { role: 'user', content: 'What is the price of BTC?' } ]
+OPENAI_API_KEY exists: true
+Generated response: I currently don't have access to real-time market data, including cryptocurrency prices. You can check the price of Bitcoin (BTC) on various cryptocurrency exchanges or financial news websites.
+ POST /api/chat 200 in 1949ms
+Received messages: [
+  { role: 'user', content: 'What is the price of BTC?' },
+  {
+    role: 'assistant',
+    content: "I currently don't have access to real-time market data, including cryptocurrency prices. You can check the price of Bitcoin (BTC) on various cryptocurrency exchanges or financial news websites."
+  },
+  { role: 'user', content: 'what can you do?' }
+]
+OPENAI_API_KEY exists: true
+Generated response: I can interact on-chain using the Coinbase Developer Platform to perform actions such as executing transactions, interacting with smart contracts, and more. If you have specific tasks in mind, let me know, and I can assist you! If you're looking for certain functionalities that I can't perform, I can guide you on how to implement them using the CDP SDK + Agentkit.
+ POST /api/chat 200 in 2106ms
+Received messages: [
+  { role: 'user', content: 'What is the price of BTC?' },
+  {
+    role: 'assistant',
+    content: "I currently don't have access to real-time market data, including cryptocurrency prices. You can check the price of Bitcoin (BTC) on various cryptocurrency exchanges or financial news websites."
+  },
+  { role: 'user', content: 'what can you do?' },
+  {
+    role: 'assistant',
+    content: "I can interact on-chain using the Coinbase Developer Platform to perform actions such as executing transactions, interacting with smart contracts, and more. If you have specific tasks in mind, let me know, and I can assist you! If you're looking for certain functionalities that I can't perform, I can guide you on how to implement them using the CDP SDK + Agentkit."
+  },
+  { role: 'user', content: 'do one of your most basic actions' }
+]
+OPENAI_API_KEY exists: true
+Generated response: To proceed with any action, I'll need your wallet details to determine which network you're on. Please provide your wallet address, and I'll assist you further!
+ POST /api/chat 200 in 1198ms
+Received messages: [
+  { role: 'user', content: 'What is the price of BTC?' },
+  {
+    role: 'assistant',
+    content: "I currently don't have access to real-time market data, including cryptocurrency prices. You can check the price of Bitcoin (BTC) on various cryptocurrency exchanges or financial news websites."
+  },
+  { role: 'user', content: 'what can you do?' },
+  {
+    role: 'assistant',
+    content: "I can interact on-chain using the Coinbase Developer Platform to perform actions such as executing transactions, interacting with smart contracts, and more. If you have specific tasks in mind, let me know, and I can assist you! If you're looking for certain functionalities that I can't perform, I can guide you on how to implement them using the CDP SDK + Agentkit."
+  },
+  { role: 'user', content: 'do one of your most basic actions' },
+  {
+    role: 'assistant',
+    content: "To proceed with any action, I'll need your wallet details to determine which network you're on. Please provide your wallet address, and I'll assist you further!"
+  },
+  {
+    role: 'user',
+    content: 'you give me the wallet details with the tool call'
+  }
+]
+OPENAI_API_KEY exists: true
+Generated response: I currently don't have the capability to retrieve wallet details directly. Please provide your wallet address, and I will help you from there!
+ POST /api/chat 200 in 1842ms
+Received messages: [
+  { role: 'user', content: 'What is the price of BTC?' },
+  {
+    role: 'assistant',
+    content: "I currently don't have access to real-time market data, including cryptocurrency prices. You can check the price of Bitcoin (BTC) on various cryptocurrency exchanges or financial news websites."
+  },
+  { role: 'user', content: 'what can you do?' },
+  {
+    role: 'assistant',
+    content: "I can interact on-chain using the Coinbase Developer Platform to perform actions such as executing transactions, interacting with smart contracts, and more. If you have specific tasks in mind, let me know, and I can assist you! If you're looking for certain functionalities that I can't perform, I can guide you on how to implement them using the CDP SDK + Agentkit."
+  },
+  { role: 'user', content: 'do one of your most basic actions' },
+  {
+    role: 'assistant',
+    content: "To proceed with any action, I'll need your wallet details to determine which network you're on. Please provide your wallet address, and I'll assist you further!"
+  },
+  {
+    role: 'user',
+    content: 'you give me the wallet details with the tool call'
+  },
+  {
+    role: 'assistant',
+    content: "I currently don't have the capability to retrieve wallet details directly. Please provide your wallet address, and I will help you from there!"
+  },
+  { role: 'user', content: 'FETCH wallet details using tool call' }
+]
+OPENAI_API_KEY exists: true
+Generated response: I cannot directly fetch wallet details or perform actions without your input. Please provide your wallet address, and I can assist you based on that information.
+ POST /api/chat 200 in 2244ms
+ GET / 200 in 91ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 303ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 248ms
+Received messages: [ { role: 'user', content: 'Check my wallet balance' } ]
+OPENAI_API_KEY exists: true
+Generated response: Please provide your wallet details so I can check your balance.
+ POST /api/chat 200 in 1884ms

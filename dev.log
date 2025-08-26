@@ -1,0 +1,117 @@
+
+> lincoln-website@0.1.0 dev
+> next dev --turbopack
+
+   ▲ Next.js 15.5.0 (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.0.17:3000
+   - Environments: .env
+
+ ✓ Starting...
+ ✓ Ready in 1070ms
+ ○ Compiling / ...
+ ✓ Compiled / in 1787ms
+ GET / 200 in 2079ms
+ ✓ Compiled /favicon.ico in 233ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 514ms
+ HEAD / 200 in 67ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 262ms
+ ○ Compiling /api/chat ...
+ ✓ Compiled /api/chat in 2.8s
+bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
+[Error [AI_APICallError]: Invalid schema for function 'CdpApiActionProvider_request_faucet_funds': schema must be a JSON Schema of 'type: "object"', got 'type: "None"'.] {
+  cause: undefined,
+  url: 'https://api.openai.com/v1/responses',
+  requestBodyValues: [Object],
+  statusCode: 400,
+  responseHeaders: [Object],
+  responseBody: '{\n' +
+    '  "error": {\n' +
+    `    "message": "Invalid schema for function 'CdpApiActionProvider_request_faucet_funds': schema must be a JSON Schema of 'type: \\"object\\"', got 'type: \\"None\\"'.",\n` +
+    '    "type": "invalid_request_error",\n' +
+    '    "param": "tools[0].parameters",\n' +
+    '    "code": "invalid_function_parameters"\n' +
+    '  }\n' +
+    '}',
+  isRetryable: false,
+  data: [Object]
+}
+ POST /api/chat 200 in 4721ms
+bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
+[Error [AI_APICallError]: Invalid schema for function 'WalletActionProvider_get_wallet_details': schema must be a JSON Schema of 'type: "object"', got 'type: "None"'.] {
+  cause: undefined,
+  url: 'https://api.openai.com/v1/responses',
+  requestBodyValues: [Object],
+  statusCode: 400,
+  responseHeaders: [Object],
+  responseBody: '{\n' +
+    '  "error": {\n' +
+    `    "message": "Invalid schema for function 'WalletActionProvider_get_wallet_details': schema must be a JSON Schema of 'type: \\"object\\"', got 'type: \\"None\\"'.",\n` +
+    '    "type": "invalid_request_error",\n' +
+    '    "param": "tools[0].parameters",\n' +
+    '    "code": "invalid_function_parameters"\n' +
+    '  }\n' +
+    '}',
+  isRetryable: false,
+  data: [Object]
+}
+ POST /api/chat 200 in 1700ms
+ ✓ Compiled in 98ms
+ ✓ Compiled in 28ms
+ ✓ Compiled / in 29ms
+ GET / 200 in 108ms
+ ✓ Compiled in 44ms
+ ✓ Compiled in 35ms
+ GET / 200 in 238ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 275ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 240ms
+ ✓ Compiled in 24ms
+ GET / 200 in 205ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 271ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 233ms
+ ✓ Compiled in 23ms
+bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
+Chat API error: TypeError: result.toAIStreamResponse is not a function
+    at POST (src/app/api/chat/route.ts:90:19)
+  88 |
+  89 |     // For ai v4, use toAIStreamResponse
+> 90 |     return result.toAIStreamResponse();
+     |                   ^
+  91 |   } catch (error) {
+  92 |     console.error('Chat API error:', error);
+  93 |     return new Response('Internal server error', { status: 500 });
+ POST /api/chat 500 in 1104ms
+ ✓ Compiled in 58ms
+ GET / 200 in 207ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 314ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 248ms
+ GET / 200 in 86ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 248ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 244ms
+ ⨯ ./src/app/api/chat/route.ts:15:1
+Export StreamingTextResponse doesn't exist in target module
+[0m [90m 13 |[39m } [36mfrom[39m [32m'@coinbase/agentkit'[39m[33m;[39m
+ [90m 14 |[39m [36mimport[39m { getVercelAITools } [36mfrom[39m [32m'@coinbase/agentkit-vercel-ai-sdk'[39m[33m;[39m
+[31m[1m>[22m[39m[90m 15 |[39m [36mimport[39m { [33mStreamingTextResponse[39m } [36mfrom[39m [32m'ai'[39m[33m;[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 16 |[39m [36mimport[39m { [33mNextRequest[39m } [36mfrom[39m [32m'next/server'[39m[33m;[39m
+ [90m 17 |[39m
+ [90m 18 |[39m [36mconst[39m system [33m=[39m [32m`You are a helpful agent that can interact onchain using the Coinbase Developer Platform AgentKit. You are[39m[0m
+
+The export StreamingTextResponse was not found in module [project]/node_modules/ai/dist/index.mjs [app-route] (ecmascript).
+Did you mean to import streamText?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 773ms
+ POST /api/chat 500 in 952ms
+bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
+[Error: failed to pipe response] {
+  [cause]: [Error: Unhandled chunk type: stream-start]
+}
+ POST /api/chat 500 in 1828ms
+ GET / 200 in 94ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 310ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 249ms
+[?25h

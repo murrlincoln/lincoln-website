@@ -1,0 +1,55 @@
+
+> lincoln-website@0.1.0 dev
+> next dev --turbopack
+
+   ▲ Next.js 15.5.0 (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.0.17:3000
+   - Environments: .env
+
+ ✓ Starting...
+ ✓ Ready in 1046ms
+ ○ Compiling /api/chat ...
+ ✓ Compiled /api/chat in 1079ms
+Chat API error: TypeError: result.toAIStreamResponse is not a function
+    at POST (src/app/api/chat/route.ts:32:19)
+  30 |
+  31 |     // In ai v4.1.54, we use toAIStreamResponse()
+> 32 |     return result.toAIStreamResponse();
+     |                   ^
+  33 |   } catch (error) {
+  34 |     console.error('Chat API error:', error);
+  35 |     return new Response('Internal server error', { status: 500 });
+ POST /api/chat 500 in 1515ms
+Chat API error: TypeError: result.toAIStream is not a function
+    at POST (src/app/api/chat/route.ts:31:27)
+  29 |
+  30 |     // Convert the ReadableStream to a Response with proper headers
+> 31 |     const stream = result.toAIStream();
+     |                           ^
+  32 |     
+  33 |     return new Response(stream, {
+  34 |       headers: {
+ POST /api/chat 500 in 366ms
+[Error: failed to pipe response] {
+  [cause]: [Error: Unhandled chunk type: stream-start]
+}
+ POST /api/chat 500 in 775ms
+ POST /api/chat 200 in 1259ms
+Received messages: [ { role: 'user', content: 'Hello, can you help me?' } ]
+Generated text: 
+ POST /api/chat 200 in 1198ms
+Received messages: [ { role: 'user', content: 'Hello, can you help me?' } ]
+ POST /api/chat 200 in 282ms
+Received messages: [ { role: 'user', content: 'Hello, can you help me?' } ]
+ POST /api/chat 200 in 243ms
+ ○ Compiling / ...
+ ✓ Compiled / in 1697ms
+ GET / 200 in 1943ms
+ ✓ Compiled /favicon.ico in 142ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 388ms
+   Reload env: .env
+ GET / 200 in 76ms
+bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
+ POST /api/chat 200 in 3949ms
+[?25h
