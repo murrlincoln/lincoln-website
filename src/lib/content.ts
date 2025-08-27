@@ -2,7 +2,7 @@ import { SiteContent } from '@/types';
 
 export const siteContent: SiteContent = {
   work: {
-    intro: "Product at Coinbase.",
+    intro: "",
     projects: [
       {
         id: "agentkit",

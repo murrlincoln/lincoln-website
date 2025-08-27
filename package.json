@@ -10,17 +10,18 @@
     "format": "biome format --write"
   },
   "dependencies": {
-    "@ai-sdk/openai": "^2.0.20",
+    "@ai-sdk/openai": "1.2.1",
     "@ai-sdk/react": "^2.0.23",
     "@coinbase/agentkit": "^0.10.0",
     "@coinbase/agentkit-vercel-ai-sdk": "^0.1.0",
-    "ai": "^4.1.54",
+    "ai": "4.1.54",
     "dotenv": "^17.2.1",
     "framer-motion": "^12.23.12",
     "next": "15.5.0",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-icons": "^5.5.0",
+    "react-markdown": "^10.1.0",
     "viem": "^2.35.1"
   },
   "devDependencies": {

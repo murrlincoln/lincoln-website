@@ -26,12 +26,12 @@ export default function StreamingHeader() {
     }
   }, [currentIndex, text]);
 
-  // Start fading in social links halfway through the text animation
+  // Start fading in social links after tagline appears
   useEffect(() => {
-    if (currentIndex > text.length / 2) {
-      setShowSocials(true);
+    if (showTagline) {
+      setTimeout(() => setShowSocials(true), 300);
     }
-  }, [currentIndex, text.length]);
+  }, [showTagline]);
 
   return (
     <div className="mb-12">

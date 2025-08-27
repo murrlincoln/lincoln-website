@@ -9,7 +9,7 @@ import Media from '@/components/sections/Media';
 import About from '@/components/sections/About';
 
 export default function Home() {
-  const [activeSection, setActiveSection] = useState('work');
+  const [activeSection, setActiveSection] = useState('about');
 
   // Handle URL hash changes
   useEffect(() => {
@@ -43,7 +43,7 @@ export default function Home() {
       case 'about':
         return <About key="about" />;
       default:
-        return <Work key="work" />;
+        return <About key="about" />;
     }
   };
 
