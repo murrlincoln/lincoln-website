@@ -248,11 +248,11 @@ export const siteContent: SiteContent = {
       },
       {
         id: "bitpush-articles",
-        title: "200+ Articles as Lead English Content Writer",
+        title: "200+ Articles as Lead Content Writer",
         type: "article",
         category: "authored",
         url: "https://en.bitpush.news/?s=lincoln+murr",
-        description: "Main English content writer for nearly four years, publishing over 200 articles garnering hundreds of thousands of views in English and translated Chinese.",
+        description: "Main content writer for nearly four years, publishing over 200 articles garnering hundreds of thousands of views in English and translated Chinese.",
         date: "Dec 2020 - Aug 2024",
         publication: "Bitpush News"
       },
@@ -374,7 +374,7 @@ export const siteContent: SiteContent = {
         id: "balaji-shoutout",
         title: "Shoutout from Balaji",
         type: "mention",
-        category: "mention",
+        category: "product-reference",
         url: "https://x.com/balajis/status/1952592094964465910",
         date: "August 5, 2025",
         publication: "X (Twitter)"
@@ -454,7 +454,7 @@ export const siteContent: SiteContent = {
   about: {
     intro: "About me.",
     paragraphs: [
-      "In middle school, I traded a gift card for Bitcoin so I could buy a VPN and pirate video games. Though I lost the wallet a long time ago, I've technically held Bitcoin for longer than I've had a bank account.",
+      "In middle school, I traded a gift card for Bitcoin so I could buy a VPN and pirate video games. Though I lost the wallet a long time ago, I've technically owned Bitcoin for longer than I've had a bank account.",
       "In 2017, I fell in love with the space, and started saying yes to every opportunity to learn about or work on crypto.",
       "These days, my work explores how autonomous agents can interact with blockchain systems, enabling new forms of digital commerce and interaction.",
       
