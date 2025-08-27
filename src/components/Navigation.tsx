@@ -44,7 +44,7 @@ export default function Navigation({ activeSection, onSectionChange }: Navigatio
       {isMobile && (
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="fixed top-4 left-4 z-50 p-2 rounded-md hover:bg-gray-100"
+          className="fixed top-4 left-4 z-50 p-3 rounded-md hover:bg-gray-100 min-w-[44px] min-h-[44px] flex items-center justify-center"
           aria-label="Toggle menu"
         >
           {isMobileMenuOpen ? <HiX size={24} /> : <HiMenu size={24} />}

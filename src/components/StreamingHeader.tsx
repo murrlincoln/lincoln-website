@@ -6,10 +6,12 @@ import SocialLinks from './SocialLinks';
 
 export default function StreamingHeader() {
   const text = "Hi, I'm Lincoln.";
+  const tagline = "Building at the intersection of AI agents and crypto infrastructure";
   const [displayedText, setDisplayedText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isComplete, setIsComplete] = useState(false);
   const [showSocials, setShowSocials] = useState(false);
+  const [showTagline, setShowTagline] = useState(false);
 
   useEffect(() => {
     if (currentIndex < text.length) {
@@ -20,6 +22,7 @@ export default function StreamingHeader() {
       return () => clearTimeout(timeout);
     } else {
       setIsComplete(true);
+      setTimeout(() => setShowTagline(true), 200);
     }
   }, [currentIndex, text]);
 
@@ -32,7 +35,7 @@ export default function StreamingHeader() {
 
   return (
     <div className="mb-12">
-      <h1 className="text-5xl md:text-6xl font-serif mb-6">
+      <h1 className="text-6xl md:text-7xl font-serif mb-4">
         {displayedText}
         {!isComplete && (
           <motion.span
@@ -44,6 +47,22 @@ export default function StreamingHeader() {
           </motion.span>
         )}
       </h1>
+      
+      {/* Tagline with fade-in animation */}
+      <motion.p
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ 
+          opacity: showTagline ? 1 : 0, 
+          y: showTagline ? 0 : 10 
+        }}
+        transition={{ 
+          duration: 0.6,
+          ease: "easeOut"
+        }}
+        className="text-lg md:text-xl text-gray-600 mb-6 font-serif"
+      >
+        {showTagline && tagline}
+      </motion.p>
       
       {/* Social Links with fade-in animation */}
       <motion.div

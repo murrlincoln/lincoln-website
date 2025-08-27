@@ -2,28 +2,64 @@ import { SiteContent } from '@/types';
 
 export const siteContent: SiteContent = {
   work: {
-    intro: "Building tools and experiences at the intersection of AI and web3.",
+    intro: "Product at Coinbase.",
     projects: [
       {
         id: "agentkit",
         title: "AgentKit",
-        description: "A toolkit that gives AI agents access to wallet and crypto functionality. Seamlessly integrate blockchain capabilities into AI frameworks.",
-        category: "coinbase",
-        technologies: ["TypeScript", "Ethereum", "Vercel AI SDK"],
-        comingSoon: true // Keep as true to show the interactive demo
+        description: "A toolkit that gives AI agents access to wallets and crypto functionality. Every AI agent deserves a wallet.",
+        category: "coinbase"
       },
       {
         id: "x402",
-        title: "x402",
-        description: "API middleware that enables payment-gated routes. Monetize your APIs with crypto payments through AgentKit or browser wallets.",
+        title: "x402", 
+        description: "Payment protocol for the agent economy. Enables AI-to-AI payments, API monetization, and microtransactions. Built to handle millions of tiny payments that would be impossible with traditional payment rails.",
+        category: "coinbase"
+      },
+      {
+        id: "upcoming-product",
+        title: "Coming Soon...",
+        description: "Excited to share a new thing I'm working on soon.",
         category: "coinbase",
-        technologies: ["Node.js", "Web3", "API Design"],
-        comingSoon: true
+        isUpcoming: true
+      },
+      {
+        id: "side-projects",
+        title: "",
+        description: "",
+        category: "side-projects",
+        demos: [
+          { 
+            name: "Dream Markets", 
+            description: "Prediction market where markets resolve based on Web Search AI queries. Won 2nd place PayPal track at Permissionless", 
+            url: "https://x.com/MurrLincoln/status/1937586512448876638",
+            date: "Jun 2025"
+          },
+          { 
+            name: "Flappy x402", 
+            description: "Pay-per-play game using x402 micropayments - bringing microtransactions to gaming", 
+            url: "https://x.com/MurrLincoln/status/1935406976881803601/video/1",
+            date: "Jun 2025"
+          },
+          { 
+            name: "x402 Shop", 
+            description: "Shopping cart API using x402 for checkout - e-commerce meets crypto payments", 
+            url: "https://x.com/MurrLincoln/status/1920572524666237188",
+            date: "May 2025"
+          },
+          { 
+            name: "Leela vs the World", 
+            description: "World's first onchain AI chess game using zkML - smart contract development for the chess board", 
+            url: "https://github.com/modulus-labs/leela_vs_world",
+            date: "Mar 2023"
+          }
+        ]
       },
       {
         id: "vanderbilt-blockchain",
         title: "Vanderbilt Blockchain - Founder & President",
-        description: "Re-chartered the club and grew it to 200+ members. Facilitated collaborations with organizations like the Ethereum Foundation, Edge and Node, Binance, Ripple Labs, etc. Created research and development committees to educate students and help them find jobs in the space. Also founded Anchor DAO, the first 501(c)(3) non-profit LLC DAO in Tennessee. One of the most rewarding and value additive things I've done.",
+        description: "One of the most rewarding and value additive things I've done. Created Tennessee's first 501(c)(3) non-profit LLC DAO.",
+        shortDescription: "Onboarding peers into the space and creating Tennessee's first 501(c)(3) non-profit LLC DAO. One of the most rewarding things I've done.",
         category: "previous-work",
         technologies: ["Community Building", "Education", "DAO Governance"],
         date: "Aug 2021 - May 2024"
@@ -32,6 +68,7 @@ export const siteContent: SiteContent = {
         id: "baf-board",
         title: "Blockchain Acceleration Foundation - Board Member",
         description: "Served on the board of BAF, helping guide strategic initiatives to accelerate blockchain adoption and education.",
+        shortDescription: "Strategic guidance for blockchain adoption initiatives and educational programs",
         category: "previous-work",
         technologies: ["Governance", "Strategic Planning"],
         date: "Apr 2022 - Apr 2024"
@@ -40,6 +77,7 @@ export const siteContent: SiteContent = {
         id: "prescryptive-health",
         title: "Prescryptive Health - Blockchain Product Manager",
         description: "Spearheaded the design and implementation of blockchain solutions to enhance the efficiency, transparency, and security of prescription data management.",
+        shortDescription: "Led blockchain solutions for secure prescription data management in healthcare",
         category: "previous-work",
         technologies: ["Healthcare", "Product Management", "Blockchain"],
         date: "Jul 2021 - Feb 2024"
@@ -48,23 +86,15 @@ export const siteContent: SiteContent = {
         id: "ethereum-fellowship",
         title: "Ethereum Protocol Fellowship",
         description: "Selected to receive mentorship and grant funding to advance the Ethereum core protocol. Aligned research into single-slot finality with Master's Thesis to create a comprehensive academic overview of the research space.",
+        shortDescription: "Master's Thesis on single-slot finality for Ethereum. Presented at Devconnect 2023 in Istanbul.",
         category: "previous-work",
         technologies: ["Protocol Research", "Single Slot Finality", "Academic Writing"],
         date: "Jul 2023 - Nov 2023"
-      },
-      {
-        id: "leela-vs-world",
-        title: "Leela vs the World - Smart Contract Developer",
-        description: "Contributed to the world's first onchain AI game built using technology from Modulus Labs. Worked on smart contract development for making the chess board.",
-        category: "previous-work",
-        technologies: ["Solidity", "Smart Contracts", "zkML"],
-        date: "Mar 2023",
-        githubUrl: "https://github.com/modulus-labs/leela_vs_world"
       }
     ]
   },
   media: {
-    intro: "Talks, articles, interviews, and research spanning AI agents, blockchain, and their convergence.",
+    intro: "Talks, articles, interviews, and research spanning AI agents, blockchain, and their convergence. See my latest newsletter [here](https://tldr.tech/api/latest/crypto).",
     items: [
       // TALKS & PRESENTATIONS
       {
@@ -73,7 +103,7 @@ export const siteContent: SiteContent = {
         type: "talk",
         category: "talk",
         url: "https://www.youtube.com/watch?v=hdD71fbtuuE",
-        description: "Personal favorite touching on the Crypto Agent trend at the peak of the hype, and forecasting where it'll go.",
+        description: "Chat on the Crypto Agent trend at the peak of the hype, and forecasting where it'll go.",
         date: "Feb 18, 2025",
         publication: "Archetype's Agents Research Day",
         favorite: true
@@ -84,7 +114,7 @@ export const siteContent: SiteContent = {
         type: "talk",
         category: "talk",
         url: "https://www.youtube.com/watch?v=v8Zohn4kcoE",
-        description: "Great overview of where x402 is and how to get started, with a brief explainer on how it works. Full crowd - standing room only!",
+        description: "Overview of x402 and how to get started, with a brief explainer on how it works and what I'm excited about.",
         date: "Aug 15, 2025",
         publication: "ETHGlobal NYC",
         favorite: true
@@ -280,14 +310,24 @@ export const siteContent: SiteContent = {
       },
       {
         id: "single-slot-finality",
-        title: "Single Slot Finality Research",
+        title: "Towards Single Slot Finality",
         type: "research",
         category: "research",
-        url: "https://publish.obsidian.md/single-slot-finality/Welcome+to+My+Research!",
-        description: "Master's Thesis research on Single Slot Finality as part of the Ethereum Protocol Fellowship.",
+        url: " https://arxiv.org/pdf/2406.09420",
+        description: "Master's Thesis research on Single Slot Finality as part of the Ethereum Protocol Fellowship. Notes: https://publish.obsidian.md/single-slot-finality/Welcome+to+My+Research!",
         date: "May 10, 2024",
         publication: "Ethereum Protocol Fellowship",
         favorite: true
+      },
+      {
+        id: "healthcare-research",
+        title: "Using Decentralized Identifiers and InterPlanetary File System to Create a Recoverable Rare Disease Patient Identity Framework",
+        type: "research",
+        category: "research",
+        url: "https://dl.acm.org/doi/10.1145/3608298.3608325",
+        description: "For the Vanderbilt HIDe Lab. Presented in Kyoto, Japan at ICMHI 2023.",
+        date: "Oct 18, 2023",
+        publication: "ACM"
       },
       
       // MENTIONS
@@ -412,11 +452,18 @@ export const siteContent: SiteContent = {
     ]
   },
   about: {
-    intro: "Hi, I'm Lincoln.",
+    intro: "About me.",
     paragraphs: [
-      "I'm a builder focused on creating tools that bridge the gap between AI and web3 technologies.",
-      "My work explores how autonomous agents can interact with blockchain systems, enabling new forms of digital commerce and interaction.",
-      "When I'm not coding, you'll find me thinking about the future of human-AI collaboration and how we can build more intuitive, powerful tools for developers."
+      "In middle school, I traded a gift card for Bitcoin so I could buy a VPN and pirate video games. Though I lost the wallet a long time ago, I've technically held Bitcoin for longer than I've had a bank account.",
+      "In 2017, I fell in love with the space, and started saying yes to every opportunity to learn about or work on crypto.",
+      "These days, my work explores how autonomous agents can interact with blockchain systems, enabling new forms of digital commerce and interaction.",
+      
+    ],
+    currentlyExcitedAbout: [
+      "The consequences of financially independent, autonomous agents",
+      "Verifiable compute",
+      "Building developer tools that make Web3 as easy as Web2",
+      "Consensus mechanisms"
     ]
   }
 };

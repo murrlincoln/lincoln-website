@@ -7,6 +7,36 @@ import { HiExternalLink, HiStar, HiChevronDown } from 'react-icons/hi';
 
 export default function Media() {
   const { intro, items } = siteContent.media;
+  
+  // Function to parse markdown links
+  const parseMarkdownLinks = (text: string) => {
+    const parts = text.split(/\[([^\]]+)\]\(([^)]+)\)/);
+    const result = [];
+    
+    for (let i = 0; i < parts.length; i += 3) {
+      // Add text before the link
+      if (parts[i]) {
+        result.push(<span key={i}>{parts[i]}</span>);
+      }
+      
+      // Add the link itself
+      if (parts[i + 1] && parts[i + 2]) {
+        result.push(
+          <a 
+            key={i + 1}
+            href={parts[i + 2]}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:text-blue-800 underline"
+          >
+            {parts[i + 1]}
+          </a>
+        );
+      }
+    }
+    
+    return result.length > 0 ? result : text;
+  };
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
   
   // Helper function to parse dates for sorting
@@ -96,7 +126,7 @@ export default function Media() {
       transition={{ duration: 0.3 }}
       className="max-w-3xl"
     >
-      <p className="text-lg text-gray-700 mb-8 font-serif">{intro}</p>
+      <p className="text-lg text-gray-700 mb-8 font-serif">{parseMarkdownLinks(intro)}</p>
       
       <div className="mb-4 flex items-center gap-2 text-sm text-gray-600">
         <HiStar className="text-yellow-500" />
@@ -113,16 +143,9 @@ export default function Media() {
           <div key={category} className="mb-6">
             <button
               onClick={() => toggleSection(category)}
-              className="w-full text-left flex items-center justify-between text-xl font-serif text-gray-900 pb-2 border-b border-gray-200 hover:text-gray-700 transition-colors"
+              className="w-full text-left flex items-center justify-between text-xl font-serif text-gray-900 py-3 md:py-2 border-b border-gray-200 hover:text-gray-700 transition-colors min-h-[44px]"
             >
-              <span className="flex items-center gap-2">
-                {categoryTitles[category as keyof typeof categoryTitles]}
-                {favoriteCount > 0 && (
-                  <span className="text-xs text-yellow-600 font-sans">
-                    ({favoriteCount} ⭐)
-                  </span>
-                )}
-              </span>
+              <span>{categoryTitles[category as keyof typeof categoryTitles]}</span>
               <div className="flex items-center gap-2">
                 <span className="text-sm text-gray-500 font-sans">{categoryItems.length}</span>
                 <motion.div
@@ -140,7 +163,12 @@ export default function Media() {
                   initial={{ height: 0, opacity: 0 }}
                   animate={{ height: 'auto', opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.3, ease: 'easeInOut' }}
+                  transition={{ 
+                    type: "spring",
+                    stiffness: 100,
+                    damping: 15,
+                    opacity: { duration: 0.2 }
+                  }}
                   style={{ overflow: 'hidden' }}
                 >
                                   <ul className="space-y-3 mt-4">

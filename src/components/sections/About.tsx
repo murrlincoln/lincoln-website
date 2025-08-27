@@ -5,7 +5,7 @@ import { siteContent } from '@/lib/content';
 import Image from 'next/image';
 
 export default function About() {
-  const { intro, paragraphs } = siteContent.about;
+  const { intro, paragraphs, currentlyExcitedAbout } = siteContent.about;
 
   return (
     <motion.div
@@ -26,6 +26,20 @@ export default function About() {
               </p>
             ))}
           </div>
+
+          {currentlyExcitedAbout && currentlyExcitedAbout.length > 0 && (
+            <div className="mt-8">
+              <h3 className="text-xl font-serif mb-4 text-gray-900">Currently excited about:</h3>
+              <ul className="space-y-2">
+                {currentlyExcitedAbout.map((item, index) => (
+                  <li key={index} className="flex items-start">
+                    <span className="text-gray-400 mr-2">→</span>
+                    <span className="text-gray-600">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
 
         <div className="md:col-span-2">

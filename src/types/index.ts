@@ -14,16 +14,21 @@ export interface WorkProject {
   id: string;
   title: string;
   description: string;
+  shortDescription?: string;
   category?: 'coinbase' | 'side-projects' | 'previous-work';
   technologies?: string[];
   demoUrl?: string;
   githubUrl?: string;
   comingSoon?: boolean;
+  date?: string;
+  isUpcoming?: boolean;
+  demos?: { name: string; description: string; url: string; date?: string }[];
 }
 
 export interface AboutContent {
   intro: string;
   paragraphs: string[];
+  currentlyExcitedAbout?: string[];
 }
 
 export interface SiteContent {
